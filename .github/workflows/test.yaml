@@ -14,6 +14,8 @@ jobs:
       uses: actions/setup-node@v1
       with: 
         node-version: ${{matrix.node-version}}
+    - name: cd app
+      run: cd APP
     - name: npm install
       run: npm ci 
     - name: teste
