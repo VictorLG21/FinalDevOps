@@ -18,6 +18,10 @@ jobs:
       run: cd APP
     - name: npm install
       run: npm install 
+      - name: cd app
+      run: cd API
+    - name: npm install
+      run: npm install 
     - name: api
       run: node API/src/app
     - name: teste
