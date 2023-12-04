@@ -1,0 +1,39 @@
+name: Python GitActions
+on: push
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.11'
+    - name: install python packages
+      run:
+        python -m pip install --upgrade pip
+        pip install aniso8601
+        pip install attrs
+        pip install click
+        pip install Flask
+        pip install flask-restplus
+        pip install Flask-SQLAlchemy
+        pip install importlib-metadata
+        pip install itsdangerous
+        pip install Jinja2
+        pip install jsonschema
+        pip install MarkupSafe
+        pip install pyrsistent
+        pip install pytz
+        pip install six
+        pip install SQLAlchemy
+        pip install Werkzeug
+        pip install zipp
+    
+    - name: execute py script
+      run: python scraping_script.py
+    - uses: stefanzweifel/git-auto-commit-action@v4
