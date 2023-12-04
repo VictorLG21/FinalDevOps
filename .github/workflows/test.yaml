@@ -18,7 +18,9 @@ jobs:
       run: cd APP
     - name: npm install
       run: npm install 
-      - name: cd app
+    - name: cd..
+      run: cd ..
+    - name: cd api
       run: cd API
     - name: npm install
       run: npm install 
