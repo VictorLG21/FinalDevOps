@@ -1,6 +1,6 @@
 from flask import request
-from flask_restplus import Resource
-from src.config.restplus import api
+from flask_restx import Resource
+from src.config.restx import api
 from src.api.serializers.jobHistory_serializer import jobHistory_request, jobHistory_result
 from src.services.jobHistory_service import create, put, delete, get, getAll
 

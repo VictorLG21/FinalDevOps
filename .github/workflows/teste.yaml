@@ -20,7 +20,7 @@ jobs:
         pip install attrs
         pip install click
         pip install Flask
-        pip install flask-restplus
+        pip install flask-restx
         pip install Flask-SQLAlchemy
         pip install importlib-metadata
         pip install itsdangerous

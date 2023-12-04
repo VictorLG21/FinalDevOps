@@ -1,5 +1,5 @@
 from flask import jsonify
-from flask_restplus import Api
+from flask_restx import Api
 
 api = Api(version='1.0', title=' Post Service API',
           description='Api de gestão de posts')

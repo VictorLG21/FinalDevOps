@@ -1,6 +1,6 @@
 from flask import request
-from flask_restplus import Resource
-from src.config.restplus import api
+from flask_restx import Resource
+from src.config.restx import api
 from src.api.serializers.employee_serializer import employee_request, employee_result
 from src.services.employee_service import create, put, delete, get, getAll
 

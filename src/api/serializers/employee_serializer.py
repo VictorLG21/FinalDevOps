@@ -1,5 +1,5 @@
-from flask_restplus import fields
-from src.config.restplus import api
+from flask_restx import fields
+from src.config.restx import api
 from src.api.serializers.jobHistory_serializer import jobHistory_result
 
 

@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint
-from src.config.restplus import api, init_config
+from src.config.restx import api, init_config
 from src.config.settings import config_by_name
 from src.models import db
 from src.api.job_controller import ns as job_namespace
@@ -17,7 +17,6 @@ def create_app(config_name):
 
 
 def setup_app(app):
-    @app.before_first_request
     def create_tables():
         db.create_all()
 
@@ -35,4 +34,4 @@ def setup_app(app):
     app.register_blueprint(blueprint, url_prefix='')
 
     if __name__ == "__main__":
-        app.run(debug=True, host='0.0.0.0')
+        app.run(debug=True, host='127.0.0.1')

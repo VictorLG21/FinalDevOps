@@ -1,6 +1,6 @@
 from src.models import db
 from src.models.jobHistory import JobHistory
-from src.config.restplus import json_abort
+from src.config.restx import json_abort
 from sqlalchemy.exc import SQLAlchemyError
 import datetime
 
