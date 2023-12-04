@@ -20,6 +20,7 @@ jobs:
         pip install attrs
         pip install click
         pip install Flask
+        pip install Flask-Scaffold
         pip install flask-restx
         pip install Flask-SQLAlchemy
         pip install importlib-metadata
