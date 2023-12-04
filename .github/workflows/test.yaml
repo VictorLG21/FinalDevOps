@@ -17,6 +17,6 @@ jobs:
     - name: cd app
       run: cd APP
     - name: npm install
-      run: npm ci 
+      run: npm install 
     - name: teste
       run: npm test
